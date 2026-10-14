@@ -44,7 +44,7 @@ const Model = {
       title: "Small Project Knitting",
       tag: "Love", 
       color: "#f40277",
-      img: "assets/Knitting.jpg",
+      img: "assets/Rajut.jpg",
       desc: "A creative offline project exploring the art of knitting. Stitching benang demi benang cuz i funny at that",
     },
   ],

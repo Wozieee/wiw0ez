@@ -112,15 +112,25 @@ const Controller = {
   },
 
   bindAudioUnlock() {
+    const overlay = document.getElementById("start-overlay");
+
     const unlock = () => {
       if (!this.audioUnlocked) {
         this.audioUnlocked = true;
+
+        // Sembunyikan overlay "Touch to Start"
+        if (overlay) {
+          overlay.classList.add("hidden");
+        }
+
+        // Putar audio BGM
         const bgm = document.getElementById("bgm-player");
         if (bgm && bgm.paused && bgm.src) {
           bgm.play().then(() => View.updateMusicUI(Model.currentTrackIndex, true)).catch(() => {});
         }
       }
     };
+
     addEventListener("pointerdown", unlock, { once: true, capture: true });
     addEventListener("keydown", unlock, { once: true, capture: true });
   },

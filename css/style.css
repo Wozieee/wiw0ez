@@ -664,3 +664,112 @@ body.has-art-home #big-name .ch:not(.box):not(.boxw){
   height: 100%;
   object-fit: cover;
 }
+
+/* ============ BGM PLAYER LEBIH KE ATAS (MOBILE) ============ */
+@media (max-width: 768px) {
+  #screen-home {
+    position: relative;
+  }
+
+  /* Posisikan BGM Player lebih ke atas di samping Woozie Poozie */
+  #screen-home #music-player {
+    position: absolute;
+    top: 30px;       /* Dinaikkan dari 80px ke 30px */
+    right: 12px;     /* Menempel di area kanan */
+    bottom: auto;
+    left: auto;
+    width: 135px;    /* Ukuran ringkas agar hemat tempat */
+    padding: 4px 6px;
+    transform: rotate(-2deg);
+    z-index: 25;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, .6);
+  }
+
+  .music-header {
+    margin-bottom: 3px;
+    padding-bottom: 2px;
+  }
+
+  .music-icon {
+    font-size: 8px;
+    letter-spacing: .05em;
+  }
+
+  .music-control-btn {
+    font-size: 7px;
+    padding: 1px 4px;
+  }
+
+  .music-tracks {
+    gap: 2px;
+  }
+
+  .music-track {
+    padding: 2px 3px;
+    gap: 4px;
+  }
+
+  .music-track img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .track-title {
+    font-size: 8.5px;
+  }
+
+  .track-status {
+    font-size: 6.5px;
+  }
+}
+
+/* ============ START OVERLAY (PERSONA 5 STYLE) ============ */
+#start-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(11, 11, 13, 0.94);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  backdrop-filter: blur(4px);
+}
+
+#start-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.start-content {
+  text-align: center;
+  transform: rotate(-3deg);
+  animation: pulseStart 1.2s ease-in-out infinite alternate;
+}
+
+.start-text {
+  font-size: clamp(32px, 7vw, 68px);
+  color: var(--white);
+  text-shadow: 4px 4px 0 var(--red);
+}
+
+.start-sub {
+  margin-top: 16px;
+  font-family: 'Archivo Black', 'Arial Black', sans-serif;
+  font-size: clamp(12px, 2.5vw, 16px);
+  letter-spacing: 0.25em;
+  background: var(--red);
+  color: var(--white);
+  padding: 8px 18px;
+  transform: skewX(-12deg);
+  display: inline-block;
+  box-shadow: 4px 4px 0 var(--black);
+  text-transform: uppercase;
+}
+
+@keyframes pulseStart {
+  from { transform: rotate(-3deg) scale(0.97); }
+  to { transform: rotate(-3deg) scale(1.04); }
+}
