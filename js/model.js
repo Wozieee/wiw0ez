@@ -34,6 +34,14 @@ const Model = {
       desc: "Built for a school assignment at SMAN 67 Jakarta. Uses RFID cards to automate attendance tracking, housed inside a simple cardboard prototype mockup.",
     },
     {
+      title: "Dual-OLED Animated Confession Display",
+      tag: "Hot", 
+      color: "#f40277",
+      live: true,
+      img: "assets/Confes.mp4",
+      desc: "ESP32 project using dual independent I2C buses to drive two OLED screens. It syncs dynamic facial animations with a real-time text narrative—smooth, expressive, and non-blocking.",
+    },
+    {
       title: "IoT Smart Car",
       tag: "ASLI CUY", 
       color: "#e60012",

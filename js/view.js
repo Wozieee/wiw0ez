@@ -178,7 +178,7 @@ const View = {
         <span class="lang" style="--lc:${f.color}">${f.tag}</span>
         <h3>${f.live ? '<span class="live-dot"></span>' : ""}${this.splitTitle(f.title)}</h3>
         <p>${f.desc}</p>
-        <div class="meta"><span>${f.live ? "EMOH" : "YAHAY"}</span></div>`;
+        <div class="meta"><span>${f.live ? "New" : "Old"}</span></div>`;
 
       // Logika Putar Video saat Kursor Masuk & Reset saat Kursor Keluar
       const video = div.querySelector("video");
